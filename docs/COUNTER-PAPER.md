@@ -1,8 +1,8 @@
-# Counter-paper: the QMHES stability and hybrid-security claims do not hold as stated
+# Our paper against the QMHES claims
 
-**Status.** Critical note. Not a cryptosystem.
-**Object.** Ryan O. Van Gelder, *QMHES — Mathematical Appendix*, Multiplicity Foundation, 2026, PhaseMirror-HQ. Theory background: Van Gelder, *Multiplicity Theory — Foundations and Applications*, DOI 10.13140/RG.2.2.18053.46568, 2025.
-**Method.** The counter-models in this repository are the Alloy modules, Lean sketches, and instability axioms in `source/supplied-counter-source.md`. This note states what those artifacts actually show, and what they do not show.
+**Authors.** This paper and the successor architecture are ours. The system under critique is not.
+**Original system.** Ty Van Gelder, published byline Ryan O. Van Gelder, Multiplicity Foundation / Citizen Gardens. *QMHES — Mathematical Appendix*, 2026, PhaseMirror-HQ. Theory: *Multiplicity Theory — Foundations and Applications*, DOI 10.13140/RG.2.2.18053.46568, 2025.
+**Successor.** ADR 001–003 in this repository. Source of the models: `source/supplied-counter-source.md`.
 
 ## 1. Scope
 
@@ -72,13 +72,15 @@ The supplied note "The 10 Bifurcating Axioms of QMHES Instability" is the workin
 
 Axiom 4 is the one with a fully specified witness. The appendix Test 3 vector is `(0,1,2,3,5,4,6,5,6)` with pattern `AAAARARAA` and final counter 7. Under the normative abort rule the session is dead at the first `R`. Continuing the pattern is only how the test is scored. `python/qmhes_counter/sequence.py` reproduces both readings.
 
-## 6. The proposed rectifications do not restore the claim
+## 6. Successor architecture
 
-ADR 001 (supplied) corrects the sign, replaces the phase map by a Cartesian isometry, and then leaves \(\mathbb{R}^{k\times k}\) for an elliptic curve \(E(\mathbb{F}_p)\) with \(P_t = [k_t]P_{t-1} \oplus G\). Hasse's bound limits the group order. It does not limit a matrix spectral norm, because the matrix is gone. Scalar multiplication by a hash of QBER is not projected gradient descent, and it is not a security reduction to the elliptic-curve discrete log. The MATLAB in `matlab/adr001/` checks that a test point stays on \(y^2 = x^3 + 2x + 3 \bmod 97\). That is a group-law unit test.
+The three ADRs are our system. They are not a proof that his equation 24 already converged.
 
-ADR 002 drops physical QKD and replaces \(\mathcal{M}_t\) by a binary tree index \(S_{t+1} = 2S_t + (H(S_t \| \mathrm{payload}) \bmod 2)\). A public tree index is not a key. The "holographic" map is a Vandermonde matrix over \(\mathbb{F}_7\). Invertibility of a square minor is linear algebra, not post-quantum security.
+ADR 001 replaces Definition 3.7 with the Cartesian embedding, flips equation 24 to descent, then leaves the matrix for a point on \(E(\mathbb{F}_p)\): \(P_t = [k_t]P_{t-1} \oplus G\), with \(k_t\) from quantized QBER and load. Hasse's bound limits the group order. It does not preserve a spectral norm, because the matrix is gone. The MATLAB in `matlab/adr001/` checks that the test point stays on \(y^2 = x^3 + 2x + 3 \bmod 97\).
 
-ADR 003 strips the Module-LWE error term and iterates a many-to-one lookup until Shannon entropy is 0. ML-KEM is a KEM because of that error term. Removing it produces an invertible, or at least low-entropy, map. A state with entropy 0 is a constant. Binding a constant into HKDF info is equivalent to not binding it. This note keeps ADR 003 in tree so the source is complete, and rejects it as a repair.
+ADR 002 drops physical QKD and replaces \(\mathcal{M}_t\) by a bifurcation index \(S_{t+1} = 2S_t + (H(S_t \| \mathrm{payload}) \bmod 2)\), mapped through a Vandermonde minor over \(\mathbb{F}_p\). That is an exact shared index, not a KEM. The data-plane KEM remains ML-KEM-1024.
+
+ADR 003 strips the Module-LWE error term and iterates until Shannon entropy is 0. That construction is ours and it is recorded, but it is not the key schedule: a constant bound into HKDF info adds no min-entropy. ML-KEM stays the encapsulation layer.
 
 ## 7. What survives
 

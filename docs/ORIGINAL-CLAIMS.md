@@ -1,10 +1,8 @@
-# Original claims under critique
+# His claims
 
-Author of the claims: **Ryan O. Van Gelder** (appendix spelling: R. Van Gelder), Multiplicity Foundation / Citizen Gardens.
+Original system: **Ty Van Gelder**, published byline **Ryan O. Van Gelder**, Multiplicity Foundation / Citizen Gardens.
 
-Source of the system claims: *QMHES — Mathematical Appendix*, Multiplicity Foundation, 2026, PhaseMirror-HQ. Page numbers below follow the appendix pagination embedded in `source/supplied-counter-source.md`. Theory background: Van Gelder, *Multiplicity Theory — Foundations and Applications*, DOI 10.13140/RG.2.2.18053.46568, July 2025.
-
-These are his claims. They are not findings of this repository.
+These claims are his. The successor in this repository is ours. See `README.md`.
 
 ## Novelty claim
 
