@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+title: "Counter-models to the Quantum-Multiplicity Hybrid Encryption System"
+message: "If you use this counter-analysis, cite it as below. Cite Van Gelder separately for the claims under critique."
+type: software
+authors:
+  - name: "QMHES counter-analysis"
+    note: "Counter-models extracted from the supplied markdown. Not the QMHES author."
+repository-code: "https://example.invalid/qmhes-counter"
+license: Apache-2.0
+references:
+  - type: report
+    title: "QMHES — Mathematical Appendix"
+    authors:
+      - family-names: "Van Gelder"
+        given-names: "Ryan O."
+    year: 2026
+    institution: "Multiplicity Foundation"
+    notes: "PhaseMirror-HQ. Appendix text used here is the copy embedded in the supplied markdown."
+  - type: article
+    title: "Multiplicity Theory — Foundations and Applications"
+    authors:
+      - family-names: "Van Gelder"
+        given-names: "Ryan O."
+    year: 2025
+    doi: "10.13140/RG.2.2.18053.46568"
+    license: "CC-BY-NC-SA-4.0"
+  - type: article
+    title: "P = NP Reinterpreted: A Prime-Indexed Multiplicity Framework for Complexity Theory"
+    authors:
+      - family-names: "Van Gelder"
+        given-names: "Ryan O."
+    year: 2026
+    doi: "10.13140/RG.2.2.12301.81127"
+    notes: "Defensive publication, Citizen Gardens / Multiplicity Foundation, 27 February 2026."
+keywords:
+  - QMHES
+  - counter-model
+  - Alloy
+  - formal methods
+  - post-quantum cryptography
