@@ -1,12 +1,16 @@
 cff-version: 1.2.0
-title: "Successor system to the Quantum-Multiplicity Hybrid Encryption System"
-message: "Cite this repository for the successor system. Cite Van Gelder separately for QMHES and Multiplicity Theory."
+title: "SnapKitty counterclaim against Multiplicity"
+message: "Cite the Trust for this counterclaim. Cite Van Gelder separately for Multiplicity Theory and QMHES."
 type: software
 authors:
-  - name: "Ahmad Parr"
-    note: "Successor system: counter-models, ADR 001–003, Test 3 runner."
-repository-code: "https://example.invalid/qmhes-counter"
-license: Apache-2.0
+  - name: "Bel esprit D'accord Trust"
+    note: "Copyright owner"
+  - name: "Ahmad Ali Parr"
+    affiliation: "SnapKitty Research Lab"
+  - name: "Jessica Westerhoff"
+    affiliation: "SnapKitty Research Lab"
+license: AGPL-3.0-only
+repository-code: "https://github.com/AHMADALIPARR/snapkitty-multiplicity-counterclaim"
 references:
   - type: report
     title: "QMHES — Mathematical Appendix"
@@ -16,7 +20,6 @@ references:
         alias: "Ty Van Gelder"
     year: 2026
     institution: "Multiplicity Foundation"
-    notes: "Original system. PhaseMirror-HQ. Appendix text used here is the copy embedded in the supplied markdown."
   - type: article
     title: "Multiplicity Theory — Foundations and Applications"
     authors:
@@ -24,9 +27,8 @@ references:
         given-names: "Ryan O."
     year: 2025
     doi: "10.13140/RG.2.2.18053.46568"
-    license: "CC-BY-NC-SA-4.0"
 keywords:
+  - counterclaim
+  - multiplicity
   - QMHES
-  - successor system
-  - counter-model
-  - Alloy
+  - SnapKitty

@@ -1,8 +1,8 @@
-# Our paper against the QMHES claims
+# Technical note supporting the counterclaim
 
-**Authors.** This paper and the successor architecture are ours. The system under critique is not.
-**Original system.** Ty Van Gelder, published byline Ryan O. Van Gelder, Multiplicity Foundation / Citizen Gardens. *QMHES — Mathematical Appendix*, 2026, PhaseMirror-HQ. Theory: *Multiplicity Theory — Foundations and Applications*, DOI 10.13140/RG.2.2.18053.46568, 2025.
-**Successor.** ADR 001–003 in this repository. Source of the models: `source/supplied-counter-source.md`.
+**Copyright.** 2026 Bel esprit D'accord Trust. Researchers: Ahmad Ali Parr and Jessica Westerhoff, SnapKitty Research Lab.
+**Instrument.** Support for [`COUNTERCLAIM.md`](COUNTERCLAIM.md). Not a court pleading.
+**Original system.** Ty Van Gelder, published byline Ryan O. Van Gelder. *QMHES — Mathematical Appendix*, 2026. Normative removal: [`../adr/ADR-004.md`](../adr/ADR-004.md).
 
 ## 1. Scope
 
