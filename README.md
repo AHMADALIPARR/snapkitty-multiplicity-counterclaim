@@ -27,9 +27,9 @@ geometric convergence in Proposition 3.13, SVD clip to spectral norm \(\le 1\), 
 
 [`docs/COUNTER-PAPER.md`](docs/COUNTER-PAPER.md) is our paper against those claims. The successor is the three ADRs, not a patch on his operator:
 
-- ADR 001 — Cartesian frequency embedding, descent sign, then exact state on \(E(\mathbb{F}_p)\) so two hosts share a point instead of a rounded matrix. `matlab/adr001/`
-- ADR 002 — hybrid QKD removed; state is a bifurcation index on an elementary abelian group. `matlab/adr002/`
-- ADR 003 — recorded lattice collapse. Entropy 0.0 deletes min-entropy; it is in tree because it is in the source, and it is not the data-plane KEM. `matlab/adr003/`
+- ADR 001 — Cartesian frequency embedding, descent sign, then exact state on \(E(\mathbb{F}_p)\) so two hosts share a point instead of a rounded matrix. [`adr/ADR-001.md`](adr/ADR-001.md), `matlab/adr001/`
+- ADR 002 — hybrid QKD removed; state is a bifurcation index on an elementary abelian group. [`adr/ADR-002.md`](adr/ADR-002.md), `matlab/adr002/`
+- ADR 003 — recorded lattice collapse. Entropy 0.0 deletes min-entropy; it is not the data-plane KEM. [`adr/ADR-003.md`](adr/ADR-003.md), `matlab/adr003/`
 
 Wire and sequence behavior we keep from his spec is the byte layout and Test 3, checked rather than redesigned. `python/qmhes_counter/sequence.py`
 
@@ -39,7 +39,9 @@ Wire and sequence behavior we keep from his spec is the byte layout and Test 3, 
 docs/COUNTER-PAPER.md     our paper
 docs/ORIGINAL-CLAIMS.md   his claims, cited
 docs/AXIOMS.md            ten instability axioms
-docs/adr/                 ADR 001–003
+adr/ADR-001.md            elliptic reduction
+adr/ADR-002.md            bifurcation / elementary abelian
+adr/ADR-003.md            crystal drain, not the KEM
 models/alloy/             relational counter-models
 models/lean/              invariant sketches (sorry)
 matlab/                   every MATLAB routine in the source
